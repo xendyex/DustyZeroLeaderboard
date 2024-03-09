@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PETB Speedruns</title>
+  <style>
+    body {
+      background-color: #333;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #444;
+      padding: 10px;
+      text-align: center;
+      font-size: 24px;
+      color: #fff;
+    }
+
+    table {
+      width: 80%;
+      margin: 20px auto;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #555;
+    }
+
+    th {
+      background-color: #666;
+    }
+
+    tr:nth-child(even) {
+      background-color: #555;
+    }
+
+    a {
+      color: #00f;
+      text-decoration: none;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Get the table and rows
+      var table = document.querySelector('table');
+      var tbody = table.querySelector('tbody');
+      var rows = [].slice.call(tbody.getElementsByTagName("tr"));
+
+      // Sort the rows based on the second column (time)
+      rows.sort(function(a, b) {
+        var timeA = a.cells[1].innerText;
+        var timeB = b.cells[1].innerText;
+        return timeA.localeCompare(timeB);
+      });
+
+      // Append the sorted rows back to the table
+      rows.forEach(function(row) {
+        tbody.appendChild(row);
+      });
+    });
+  </script>
+</head>
+<body>
+
+  <header>
+    PETB Speedruns
+  </header>
+
+  <table>
+    <thead>
+      <tr>
+        <th>User</th>
+        <th>Time</th>
+        <th>Submission Date</th>
+        <th>Video</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Add your speedrun data here -->
+      <tr>
+        <td>ipsum</td>
+        <td>00:25:12</td>
+        <td>2024-03-08</td>
+        <td><a href="your_video_link_2">Watch</a></td>
+      </tr>
+      <tr>
+        <td>Xen</td>
+        <td>00:30:45</td>
+        <td>2024-03-09</td>
+        <td><a href="your_video_link_1">Watch</a></td>
+      </tr>
+      <tr>
+        <td>lorem</td>
+        <td>00:40:20</td>
+        <td>2024-03-07</td>
+        <td><a href="your_video_link_3">Watch</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
