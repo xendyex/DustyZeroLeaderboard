@@ -40,30 +40,10 @@
     }
 
     a {
-      color: #00f;
+      color: #6EC3ED; /* Updated link color */
       text-decoration: none;
     }
   </style>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      // Get the table and rows
-      var table = document.querySelector('table');
-      var tbody = table.querySelector('tbody');
-      var rows = [].slice.call(tbody.getElementsByTagName("tr"));
-
-      // Sort the rows based on the second column (time)
-      rows.sort(function(a, b) {
-        var timeA = a.cells[1].innerText;
-        var timeB = b.cells[1].innerText;
-        return timeA.localeCompare(timeB);
-      });
-
-      // Append the sorted rows back to the table
-      rows.forEach(function(row) {
-        tbody.appendChild(row);
-      });
-    });
-  </script>
 </head>
 <body>
 
@@ -81,21 +61,17 @@
       </tr>
     </thead>
     <tbody>
-      <!-- Add your speedrun data here -->
+
+      <!-- how to make a thing
       <tr>
-        <td>ipsum</td>
-        <td>00:55:12</td>
-        <td>2024-03-08</td>
-        <td><a href="your_video_link_2">Watch</a></td>
+        <td>Lorem Ipsum</td>
+        <td>00:40:20</td>
+        <td>2024-03-07</td>
+        <td><a href="your_video_link_3">Watch</a></td>
       </tr>
+      -->
       <tr>
-        <td>Xen</td>
-        <td>00:30:45</td>
-        <td>2024-03-09</td>
-        <td><a href="your_video_link_1">Watch</a></td>
-      </tr>
-      <tr>
-        <td>lorem</td>
+        <td>Lorem Ipsum</td>
         <td>00:40:20</td>
         <td>2024-03-07</td>
         <td><a href="your_video_link_3">Watch</a></td>
